@@ -13,7 +13,7 @@ import com.ctre.phoenix6.hardware.TalonFX;
 
 public class MotorThing {
     
-    // needs to be static, Constants.NEOMotorIndex references the CAN ID of the spark max
+    // needs to be static, Constants.NEOMotorIndex references the ID of the spark max
     public static final CANSparkMax NEOMotor = new CANSparkMax(Constants.NEOMotorIndex, MotorType.kBrushless);
     // only need to type the motor type for Spark Max Motors
     public static final TalonFX TalonMotor = new TalonFX(Constants.TalonMotorIndex);

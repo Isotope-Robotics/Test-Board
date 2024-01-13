@@ -92,18 +92,20 @@ public class Robot extends TimedRobot {
    MotorThing.NEOMotor.set(0);
  }
 
- // TalonFX Motor
- if (Constants.xbox.getRawButton(2)) {
-     System.out.println("Button 2 Pressed!");
-     MotorThing.TalonMotor.set(0.5);
- }
- else {
-   MotorThing.TalonMotor.set(0);
- }
- }
+
+  // TalonFX Motor
+  if (Constants.xbox.getRawButton(2)) {
+      System.out.println("Button 2 Pressed!");
+      MotorThing.TalonMotor.set(0.5);
+  }
+  else {
+    MotorThing.TalonMotor.set(0);
+  }
+}
+  
 
 
- 
+
   /** This function is called once when the robot is disabled. */
   @Override
   public void disabledInit() {}
