@@ -77,14 +77,30 @@ public class Robot extends TimedRobot {
   public void teleopInit() {}
 
   /** This function is called periodically during operator control. */
-  @Override
-  public void teleopPeriodic() {
 
-     if (Constants.xbox.getRawButton(1)) {
-      System.out.println("Button Pressed!");
-      MotorThing.NEOMotor.set(0.5);
-  }
-  }
+ // This is the Driver Operated Control Period, TeleOp
+ @Override
+ public void teleopPeriodic() {
+
+   // NEO Motor
+    if (Constants.xbox.getRawButton(1)) {
+     System.out.println("Button 1 Pressed!");
+     // Sets the power
+     MotorThing.NEOMotor.set(0.5);
+ }
+ else {
+   MotorThing.NEOMotor.set(0);
+ }
+
+ // TalonFX Motor
+ if (Constants.xbox.getRawButton(2)) {
+     System.out.println("Button 2 Pressed!");
+     MotorThing.TalonMotor.set(0.5);
+ }
+ else {
+   MotorThing.TalonMotor.set(0);
+ }
+ }
 
 
  
