@@ -11,6 +11,7 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 import com.ctre.phoenix6.hardware.TalonFX;
 
 
+
 public class MotorThing {
     
     // needs to be static, Constants.NEOMotorIndex references the ID of the spark max

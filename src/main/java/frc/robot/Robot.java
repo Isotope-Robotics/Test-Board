@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -31,6 +32,7 @@ public class Robot extends TimedRobot {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
+
   }
 
   /**
@@ -103,6 +105,20 @@ public class Robot extends TimedRobot {
   else {
     MotorThing.TalonMotor.set(0);
   }
+
+  // Set the servo position to half (0.5)
+  if (Constants.xbox.getRawButton(3)) {
+      System.out.println("Button 3 Pressed!");
+      relay.servoDown();
+  }
+  if (Constants.xbox.getRawButton(4)) {
+      System.out.println("Button 4 Pressed!");
+      relay.servoUp();
+  }
+  if (relay.laser.get()) {
+    MotorThing.TalonMotor.set(.25);
+  }
+
 }
   
 
