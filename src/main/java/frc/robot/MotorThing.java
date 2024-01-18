@@ -10,7 +10,7 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 // imports the CTRE TalonFX motor library
 import com.ctre.phoenix6.hardware.TalonFX;
 
-import com.ctre.phoenix6.hardware
+import com.ctre.phoenix6.hardware.*;
 
 
 
