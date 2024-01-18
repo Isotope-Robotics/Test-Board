@@ -10,12 +10,16 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 // imports the CTRE TalonFX motor library
 import com.ctre.phoenix6.hardware.TalonFX;
 
+import com.ctre.phoenix6.hardware
+
 
 
 public class MotorThing {
     
     // needs to be static, Constants.NEOMotorIndex references the ID of the spark max
     public static final CANSparkMax NEOMotor = new CANSparkMax(Constants.NEOMotorIndex, MotorType.kBrushless);
-    // only need to type the motor type for Spark Max Motors
+    // only need to set the motor type for Spark Max Motors
     public static final TalonFX TalonMotor = new TalonFX(Constants.TalonMotorIndex);
+
+    public static final CANcoder CIMMotor = new CANcoder(Constants.CIMMotorIndex);
 }

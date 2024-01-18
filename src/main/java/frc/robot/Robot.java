@@ -108,6 +108,15 @@ public class Robot extends TimedRobot {
     MotorThing.TalonMotor.set(0);
   }
 
+  if (Constants.xbox.getRawButton(2)) {
+      System.out.println("Button 2 Pressed!");
+      MotorThing.TalonMotor.set(0.5);
+      
+  }
+  else {
+    MotorThing.TalonMotor.set(0);
+  }
+
   // Set the servo position to half (0.5)
   if (Constants.xbox.getRawButton(3)) {
       System.out.println("Button 3 Pressed!");
