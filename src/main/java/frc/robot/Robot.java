@@ -4,6 +4,7 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -22,6 +23,7 @@ public class Robot extends TimedRobot {
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
   Timer autonomousTimer = new Timer();
+  public static DigitalInput photoelectric = new DigitalInput(0);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -129,6 +131,8 @@ public class Robot extends TimedRobot {
   if (relay.laser.get()) {
     MotorThing.TalonMotor.set(0);
   }
+
+  System.out.println(photoelectric.get());
   /* 
   if (Constants.xbox.getRawAxis(3) > 0.01) {
     MotorThing.TalonMotor.set(Constants.xbox.getRawAxis(3));
